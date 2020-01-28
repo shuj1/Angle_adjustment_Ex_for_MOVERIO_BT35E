@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Angle_adjustment_Ex_for_MOVERIO_BT35E.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Angle_adjustment_Ex_for_MOVERIO_BT35E"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock Margin="40 100 0 0" Text="ラインの操作方法" FontSize="30"/>
+
+        <ComboBox Name="moveSelectCB" Margin="40, 150, 0, 0" Width="200">
+            <ComboBoxItem IsSelected="true">同時に操作</ComboBoxItem>
+            <ComboBoxItem>独立に操作</ComboBoxItem>
+        </ComboBox>
+        
+        <TextBlock Margin="40 200 0 0" Text="センサーを使う" FontSize="30"/>
+
+        <ComboBox Name="sensorCB" Margin="40, 250, 0, 0" Width="200">
+            <ComboBoxItem IsSelected="true">No</ComboBoxItem>
+            <ComboBoxItem>Yes</ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Margin="40 300 0 0" Text="カメラを使う" FontSize="30"/>
+
+        <ComboBox Name="cameraCB" Margin="40, 350, 0, 0" Width="200">
+            <ComboBoxItem IsSelected="true">No</ComboBoxItem>
+            <ComboBoxItem>Yes</ComboBoxItem>
+        </ComboBox>
+
+        <Button Name="showWindowButton" VerticalAlignment="Top" Margin="300 130 0 0" Width="200" Height="50" Content="各種ウィンドウを表示する" Click="ShowWindowButton_Click"/>
+        <Button Name="startTrialButton" VerticalAlignment="Top" Margin="300 200 0 0" Width="200" Height="50" Content="トライアルを開始する" IsEnabled="False" Click="StartTrialButton_Click"/>
+        <Button Name="outputButton" VerticalAlignment="Top" Margin="300 270 0 0" Width="200" Height="50" Content="データを書き出す" Click="OutputButton_Click"/>
+        <Button Name="endButton" VerticalAlignment="Top" Margin="300 340 0 0" Width="200" Height="50" Content="終了する" Click="EndButton_Click"/>
+    </Grid>
+</Page>

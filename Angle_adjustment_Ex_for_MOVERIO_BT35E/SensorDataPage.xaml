@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Angle_adjustment_Ex_for_MOVERIO_BT35E.SensorDataPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:local="using:Angle_adjustment_Ex_for_MOVERIO_BT35E"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sensors="using:Angle_adjustment_Ex_for_MOVERIO_BT35E.Sensors"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <controls:TabView x:Name="sensorsTab" SelectionChanged="SensorsTab_SelectionChanged">
+            <controls:TabViewItem Header="Accelerometer">
+                <sensors:AccelerometerControl />
+            </controls:TabViewItem>
+            <controls:TabViewItem Header="Gyrometer">
+                <sensors:GyrometerControl />
+            </controls:TabViewItem>
+        </controls:TabView>
+    </Grid>
+</Page>
