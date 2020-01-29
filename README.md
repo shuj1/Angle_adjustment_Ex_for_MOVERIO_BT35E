@@ -72,7 +72,10 @@
 ### Step4 出力されるファイル名を変更する
 `StoreData.cs`を開き、11行目の`trialDataFileName`(観察者の応答が記録される)と12行目の`sensorDataFileName`(センサーデータが記録される)を変更する。
 
+`CameraViewPage.xaml.cs`を開き、251行目の`CreateFileAsync`内の文字列(録画データ名)を変更する。
+
 ![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img004.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img005.png)
 
 ### Step5 各種パラメータを変更する
 - トライアル数
@@ -88,21 +91,21 @@
 - ラインの太さ
   - `Common.cs`の20行目の`lineThickness`を変更する(単位はdeg, 初期値は0.1)
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img005.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img006.png)
 
 ### Step6 プログラムを実行する
 ソリューションプラットフォームを"x86"に指定し、ローカルコンピューターで実行ボタンを押す。
 
 ※初回実行時は、カメラとマイクへのアクセスを求められます。全てOKしてください。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img006.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img007.png)
 
 ### Step7 トライアル開始の準備をする
 ラインの操作方法、センサーを使うかどうか、カメラを使うかどうかをそれぞれ選択し、選択が完了したら"各種ウィンドウを表示する"ボタンを押す。
 
 ※MOVERIOを3D表示にしてください。方法は[ユーザーズガイド](https://tech.moverio.epson.com/ja/bt-35e/pdf/bt35e_userguide.pdf)を参照してください。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img007.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img008.png)
 
 ### Step8 センサーの種類を選択する
 "各種ウィンドウを表示する"ボタンを押すと、いくつかのウィンドウが出現する。
@@ -113,7 +116,7 @@
 
 カメラを使う場合、カメラウィンドウがPC側に出されます。MOVERIOのカメラではなく、PCのカメラが起動してしまう場合、MOVERIOのデバイスIDが異なる可能性があります。詳しくは後述の「MOVERIO BT-35E デバイスIDについて」を参照してください。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img008.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img009.png)
 
 ### Step9 トライアルを開始する
 "トライアルを開始する"ボタンを押すと、トライアルがスタートします。この時点からセンサーデータの取得とカメラによる録画がスタートします。
@@ -123,7 +126,7 @@
 1. トライアルの進行状況が"●●/●●"の形式で表示される。 → 観察者はBボタンを押して次へ進む。
 2. 固定点と、その左右にラインが表示される。 → 観察者はスティックでラインの角度を調節し、Rトリガーを引いて応答を確定する。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img009.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img010.png)
 
 ### Step11 実験を終了する
 スマートグラス側に「終了しました」と表示されれば全トライアル終了です。終了したら、以下の作業を行います。
@@ -131,16 +134,16 @@
 2. "データを書き出す"ボタンを押して、センサーデータと観察者の応答データをテキストファイルに書き込み、保存します。
 3. "終了するボタン"を押してプログラムを終了します。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img010.png)
 ![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img011.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img012.png)
 
 ### Step12 データを確認する
 センサーデータと観察者の応答データは"ドキュメント"ディレクトリに保存されます。
 
 録画した動画データは"ビデオ"ディレクトリに保存されます。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img012.png)
 ![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img013.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img014.png)
 
 ## MOVERIO BT-35E デバイスIDについて
 プログラムに記述してあるMOVERIOのデバイスIDが異なる場合、MOVERIOのカメラが起動しません。ここでは、自分の所持するMOVERIOのデバイスIDを調べる方法と設定方法について説明します。
@@ -153,7 +156,7 @@
 
 5. `CameraViewPage.xaml.cs`の36行目の`MoverioCameraId`を書き変えて、変更を保存(Ctrl + S)する。
 
-![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img014.png)
+![](https://github.com/Fukky21/Angle_adjustment_Ex_for_MOVERIO_BT35E/blob/images/usage_img015.png)
 
 ## Q&A
 ### カメラ, センサーが反応しません。
